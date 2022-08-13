@@ -1,8 +1,5 @@
-import readlineSunc from 'readline-sync';
+import readlineSync from 'readline-sync';
 
-const acquaintance = () => {
-  const userName = readlineSunc.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
-};
+const question = (text) => readlineSync.question(text);
 
-export default acquaintance;
+export default question;
