@@ -8,7 +8,6 @@ export const gretting = () => {
   const getUserName = question('May I have your name? ');
   const userGreting = (text) => `Hello, ${text}!`;
   console.log(userGreting(getUserName));
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
   return getUserName;
 };
 
