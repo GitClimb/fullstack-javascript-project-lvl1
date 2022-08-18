@@ -2,7 +2,12 @@ import _ from 'lodash';
 import { game } from './index.js';
 
 const answer = (coll) => {
-  answer.sort = ((a, b) => a - b);
+  const sorted = coll;
+  const compareNumbers = (a, b) => {
+    const compare = a - b;
+    return compare;
+  };
+  sorted.sort(compareNumbers);
   let result = 0;
   let count = 1;
 
