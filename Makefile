@@ -10,8 +10,11 @@ brain-even:
 brain-calc:
 	node bin/game/brain-calc.js
 
-brain-calc:
+brain-gcd:
 	node bin/game/brain-gcd.js
+
+brain-progression:
+	node bin/game/brain-progression.js
 
 publish:
 	npm publish --dry-run
