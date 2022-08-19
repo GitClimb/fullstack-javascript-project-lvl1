@@ -17,12 +17,12 @@ const answer = (coll, value) => {
   for (let i = 0; i < coll.length; i += 1) {
     if (i === value) {
       result.push(coll[i]);
-    } 
+    }
   }
   return String(result);
 };
 
-const replValue  = (coll, value) => {
+const replValue = (coll, value) => {
   const result = [];
   for (let i = 0; i < coll.length; i += 1) {
     if (coll[i] === Number(value)) {
@@ -41,8 +41,9 @@ const brainProgression = (userName) => {
     const length = _.random(5, 10);
     const firstNum = _.random(1, 100);
     const steps = _.random(1, 100);
-    const rightAnswer = answer(progressio(length, firstNum, steps), _.random(0, progressio.length - 1));
-    const questi = replValue(progressio(length, firstNum, steps), rightAnswer );
+    const lengthColl = (coll) => _.random(0, coll.length - 1);
+    const rightAnswer = answer(progressio(length, firstNum, steps), lengthColl(progressio));
+    const questi = replValue(progressio(length, firstNum, steps), rightAnswer);
 
     if (game(userName, questi, rightAnswer) === false) {
       break;

@@ -8,6 +8,5 @@ parserOptions:
   sourceType: module
 rules: {
   "no-console": 0,
-  "import/extensions": "off",
-  "linebreak-style": 0
+  "import/extensions": "off"
 }
