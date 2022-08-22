@@ -26,9 +26,9 @@ brain-prime - Определение простого числа.
 Приятной игры. 
 
 
-asciinema brain-even - <script id="asciicast-e3oeo2b5CTBxT1oNPsuNzjKX5" src="https://asciinema.org/a/e3oeo2b5CTBxT1oNPsuNzjKX5.js" async></script>;
+asciinema brain-even - <a href="https://asciinema.org/a/e3oeo2b5CTBxT1oNPsuNzjKX5" target="_blank"><img src="https://asciinema.org/a/e3oeo2b5CTBxT1oNPsuNzjKX5.svg" /></a>;
 
-asciinema brain-calc - <script id="asciicast-PvpfKWtr5wcwy3gAlnRTopLCR" src="https://asciinema.org/a/PvpfKWtr5wcwy3gAlnRTopLCR.js" async></script>;
+asciinema brain-calc - <a href="https://asciinema.org/a/PvpfKWtr5wcwy3gAlnRTopLCR" target="_blank"><img src="https://asciinema.org/a/PvpfKWtr5wcwy3gAlnRTopLCR.svg" /></a>;
 
 asciinema brain-gcd - <script id="asciicast-twqbXknS1RvvhNAvC8ArLMkFb" src="https://asciinema.org/a/twqbXknS1RvvhNAvC8ArLMkFb.js" async></script>;
 
