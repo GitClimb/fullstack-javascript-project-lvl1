@@ -26,6 +26,8 @@ brain-prime - Определение простого числа.
 
 Приятной игры. 
 
+<video src=https://asciinema.org/a/e3oeo2b5CTBxT1oNPsuNzjKX5 controls>
+
 
 asciinema brain-even - https://asciinema.org/a/e3oeo2b5CTBxT1oNPsuNzjKX5;
 asciinema brain-calc - https://asciinema.org/a/PvpfKWtr5wcwy3gAlnRTopLCR;
