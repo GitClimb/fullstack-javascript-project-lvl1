@@ -26,8 +26,12 @@ brain-prime - Определение простого числа.
 Приятной игры. 
 
 
-asciinema brain-even - https://asciinema.org/a/e3oeo2b5CTBxT1oNPsuNzjKX5;
-asciinema brain-calc - https://asciinema.org/a/PvpfKWtr5wcwy3gAlnRTopLCR;
-asciinema brain-gcd - https://asciinema.org/a/twqbXknS1RvvhNAvC8ArLMkFb;
-asciinema brain-progression - https://asciinema.org/a/Hc0tdshTzo4xXyK5BAgEKTXcS;
-asciinema brain-prime - https://asciinema.org/a/SUmy5KvQkkU0wnyC7jzRndkzD;
+asciinema brain-even - <script id="asciicast-e3oeo2b5CTBxT1oNPsuNzjKX5" src="https://asciinema.org/a/e3oeo2b5CTBxT1oNPsuNzjKX5.js" async></script>;
+
+asciinema brain-calc - <script id="asciicast-PvpfKWtr5wcwy3gAlnRTopLCR" src="https://asciinema.org/a/PvpfKWtr5wcwy3gAlnRTopLCR.js" async></script>;
+
+asciinema brain-gcd - <script id="asciicast-twqbXknS1RvvhNAvC8ArLMkFb" src="https://asciinema.org/a/twqbXknS1RvvhNAvC8ArLMkFb.js" async></script>;
+
+asciinema brain-progression - <script id="asciicast-Hc0tdshTzo4xXyK5BAgEKTXcS" src="https://asciinema.org/a/Hc0tdshTzo4xXyK5BAgEKTXcS.js" async></script>;
+
+asciinema brain-prime - <script id="asciicast-SUmy5KvQkkU0wnyC7jzRndkzD" src="https://asciinema.org/a/SUmy5KvQkkU0wnyC7jzRndkzD.js" async></script>;
