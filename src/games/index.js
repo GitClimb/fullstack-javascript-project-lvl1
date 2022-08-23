@@ -10,11 +10,10 @@ const runGameEngine = (descriptString, generateRound) => {
   let count = 0;
 
   for (let i = 0; i < rounds; i += 1) {
-    const question = generateRound[0];
+    const [question, answer] = generateRound;
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    const answer = generateRound[1](generateRound[0]);
-
+    
     if (userAnswer === answer) {
       console.log('Correct!');
       count += 1;
