@@ -17,7 +17,7 @@ const runGameEngine = (descriptString, generateRound) => {
       console.log('Correct!');
       count += 1;
     } else {
-      console.log(`'${question}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${getUserName}!`);
+      console.log(`'${generateRound[0]}' is wrong answer ;(. Correct answer was '${generateRound[1]}'.\nLet's try again, ${getUserName}!`);
       break;
     }
   }
