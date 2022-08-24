@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import readlineSync from 'readline-sync';
 
 const rounds = 3;
@@ -7,7 +6,7 @@ const runGameEngine = (rules, generateRound) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-  console.log(descriptString);
+  console.log(rules);
 
   for (let i = 0; i < rounds; i += 1) {
     const [question, answer] = generateRound();
@@ -22,7 +21,6 @@ const runGameEngine = (rules, generateRound) => {
     }
   }
   console.log(`Congratulations, ${userName}!`);
-  
 };
 
 export default runGameEngine;
