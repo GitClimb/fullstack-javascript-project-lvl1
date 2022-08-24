@@ -3,13 +3,15 @@ import _ from 'lodash';
 export const descriptionGame = 'What number is missing in the progression?';
 
 const progressio = (length, start, steps) => {
+  const lengthProgr = length;
   const result = [start];
 
-  for (let i = 0; i < length; i += 1) {
+  for (let i = 0; i <= lengthProgr; i += 1) {
+    console.log(lengthProgr);
     result.push(result[result.length - 1] + steps);
     i += 1;
   }
-
+  console.log(result);
   return result;
 };
 
@@ -36,7 +38,7 @@ const replValue = (coll, value) => {
 };
 
 export const generateRound = () => {
-  const length = _.random(6, 10);
+  const length = _.random(7, 10);
   const firstNum = _.random(1, 100);
   const steps = _.random(1, 100);
   const lengthColl = (coll) => _.random(0, coll.length - 1);
