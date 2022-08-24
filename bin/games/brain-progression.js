@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import brainProgression from '../../src/progression.js';
-import { gretting } from '../../src/index.js';
+import { descriptionGame, generateRound } from '../../src/games/progression.js';
+import runGameEngine from '../../src/index.js';
 
-brainProgression(gretting());
+runGameEngine(descriptionGame, generateRound);
