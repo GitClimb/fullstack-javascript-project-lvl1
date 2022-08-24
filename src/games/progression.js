@@ -7,13 +7,13 @@ const progressio = (length, start, steps) => {
   const result = [start];
 
   for (let i = 0; i <= lengthProgr; i += 1) {
-    console.log(lengthProgr);
     result.push(result[result.length - 1] + steps);
     i += 1;
   }
-  console.log(result);
   return result;
 };
+
+const lengthColl = () => _.random(0, progressio.length - 1);
 
 const answer = (coll, value) => {
   const result = [];
@@ -41,8 +41,8 @@ export const generateRound = () => {
   const length = _.random(7, 10);
   const firstNum = _.random(1, 100);
   const steps = _.random(1, 100);
-  const lengthColl = (coll) => _.random(0, coll.length - 1);
-  const rightAnswer = answer(progressio(length, firstNum, steps), lengthColl(progressio));
+
+  const rightAnswer = answer(progressio(length, firstNum, steps), lengthColl());
   const question = replValue(progressio(length, firstNum, steps), rightAnswer);
   return [question, rightAnswer];
 };
