@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { brainEven } from '../../src/even.js';
-import { gretting } from '../../src/index.js';
+import { descriptionGame, generateRound } from '../../src/games/even.js';
+import runGameEngine from '../../src/index.js';
 
-brainEven(gretting());
+runGameEngine(descriptionGame, generateRound);
