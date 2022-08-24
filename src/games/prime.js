@@ -1,5 +1,6 @@
 import _ from 'lodash';
-import { game } from './index.js';
+
+export const descriptionGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const answer = (number) => {
   let result = 0;
@@ -15,17 +16,7 @@ const answer = (number) => {
   return isPrime;
 };
 
-const brainPrime = (userName) => {
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-  for (let i = 0; i < 3; i += 1) {
-    const number = _.random(1, 100);
-
-    if (game(userName, number, answer(number)) === false) {
-      break;
-    } else if (i === 2) {
-      console.log(`Congratulations, ${userName}!`);
-    }
-  }
+export const generateRound = () => {
+  const randomNumb = _.random(1, 100);
+  return [randomNumb, answer(randomNumb)];
 };
-
-export default brainPrime;

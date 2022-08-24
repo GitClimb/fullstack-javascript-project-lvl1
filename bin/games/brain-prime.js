@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import brainPrime from '../../src/prime.js';
-import { gretting } from '../../src/index.js';
+import { descriptionGame, generateRound } from '../../src/games/prime.js';
+import runGameEngine from '../../src/index.js';
 
-brainPrime(gretting());
+runGameEngine(descriptionGame, generateRound);
