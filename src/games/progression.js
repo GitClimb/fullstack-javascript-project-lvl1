@@ -36,7 +36,7 @@ const replValue = (coll, value) => {
 };
 
 export const generateRound = () => {
-  const length = _.random(5, 10);
+  const length = _.random(6, 10);
   const firstNum = _.random(1, 100);
   const steps = _.random(1, 100);
   const lengthColl = (coll) => _.random(0, coll.length - 1);
