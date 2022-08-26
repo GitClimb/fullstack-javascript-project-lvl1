@@ -1,14 +1,10 @@
 import _ from 'lodash';
+import runGameEngine from '../index.js';
 
-export const descriptionGame = 'Find the greatest common divisor of given numbers.';
+const descriptionGame = 'Find the greatest common divisor of given numbers.';
 
-const answer = (coll) => {
-  const sorted = coll;
-  const compareNumbers = (a, b) => {
-    const compare = a - b;
-    return compare;
-  };
-  sorted.sort(compareNumbers);
+const getAnswer = (coll) => {
+  coll.sort(((a, b) => a - b));
   let result = 0;
   let count = 1;
 
@@ -21,9 +17,12 @@ const answer = (coll) => {
   return String(result);
 };
 
-export const generateRound = () => {
+const generateRound = () => {
   const number1 = _.random(1, 100);
   const number2 = _.random(1, 100);
-  const expression = `${number1} ${number2}`;
-  return [expression, answer([number1, number2])];
+  const question = `${number1} ${number2}`;
+  const answer = getAnswer([number1, number2]);
+  return [question, answer];
 };
+
+export default () => runGameEngine(descriptionGame, generateRound);
