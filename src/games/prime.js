@@ -1,22 +1,24 @@
 import _ from 'lodash';
+import runGameEngine from '../index.js';
 
-export const descriptionGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const descriptionGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const answer = (number) => {
-  let result = 0;
+const getAnswer = (number) => {
   let count = 2;
 
-  while (count <= number) {
-    if (number % count === 0) {
-      result += count;
+  while (count < number) {
+    if (number % count === 0 && count !== number) {
+      return 'no';
     }
     count += 1;
   }
-  const isPrime = result === number ? 'yes' : 'no';
-  return isPrime;
+  return 'yes';
 };
 
-export const generateRound = () => {
-  const randomNumb = _.random(1, 100);
-  return [randomNumb, answer(randomNumb)];
+const generateRound = () => {
+  const question = _.random(1, 100);
+  const answer = getAnswer(question);
+  return [question, answer];
 };
+
+export default () => runGameEngine(descriptionGame, generateRound);
