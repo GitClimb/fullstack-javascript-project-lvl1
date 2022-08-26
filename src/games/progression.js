@@ -1,48 +1,27 @@
 import _ from 'lodash';
+import runGameEngine from '../index.js';
 
 export const descriptionGame = 'What number is missing in the progression?';
 
-const progressio = (length, start, steps) => {
-  const lengthProgr = length;
-  const result = [start];
+const getQuestion = (length, start, steps) => {
+  const lengthProgression = length;
+  const coll = [start];
 
-  for (let i = 0; i <= lengthProgr; i += 1) {
-    result.push(result[result.length - 1] + steps);
-    i += 1;
+  for (let i = 0; i < lengthProgression; i += 1) {
+    coll.push(coll[coll.length - 1] + steps);
   }
-  return result;
-};
-
-const lengthColl = () => _.random(0, progressio.length - 1);
-
-const answer = (coll, value) => {
-  const result = [];
-  for (let i = 0; i < coll.length; i += 1) {
-    if (i === value) {
-      result.push(coll[i]);
-    }
-  }
-  return String(result);
-};
-
-const replValue = (coll, value) => {
-  const result = [];
-  for (let i = 0; i < coll.length; i += 1) {
-    if (coll[i] === Number(value)) {
-      result.push('..');
-    } else {
-      result.push(coll[i]);
-    }
-  }
-  return result.join(' ');
+  const answer = coll[_.random(0, coll.length - 1)];
+  coll[coll.indexOf(answer)] = '..';
+  return [coll.join(' '), String(answer)];
 };
 
 export const generateRound = () => {
-  const length = _.random(7, 10);
-  const firstNum = _.random(1, 100);
+  const length = _.random(5, 10);
+  const start = _.random(1, 100);
   const steps = _.random(1, 100);
 
-  const rightAnswer = answer(progressio(length, firstNum, steps), lengthColl());
-  const question = replValue(progressio(length, firstNum, steps), rightAnswer);
-  return [question, rightAnswer];
+  const [question, answer] = getQuestion(length, start, steps);
+  return [question, answer];
 };
+
+export default () => runGameEngine(descriptionGame, generateRound);

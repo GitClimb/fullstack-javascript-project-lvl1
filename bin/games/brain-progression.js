@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { descriptionGame, generateRound } from '../../src/games/progression.js';
-import runGameEngine from '../../src/index.js';
+import runProgressionGame from '../../src/games/progression.js';
 
-runGameEngine(descriptionGame, generateRound);
+runProgressionGame();
