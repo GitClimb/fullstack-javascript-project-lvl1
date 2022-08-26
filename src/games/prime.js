@@ -4,6 +4,9 @@ import runGameEngine from '../index.js';
 const descriptionGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const getAnswer = (number) => {
+  if (number === 1) {
+    return 'no';
+  }
   let count = 2;
 
   while (count < number) {
