@@ -3,15 +3,12 @@ import runGameEngine from '../index.js';
 
 const descriptionGame = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const getAnswer = (number) => {
-  const isEven = (numb) => numb % 2 === 0;
-  const numberIsEven = isEven(number) ? 'yes' : 'no';
-  return numberIsEven;
-};
+const isEven = (number) => number % 2 === 0;
 
 const generateRound = () => {
-  const question = _.random(1, 100);
-  const answer = getAnswer(question);
+  const randomNumber = _.random(1, 100);
+  const answer = isEven(randomNumber) ? 'yes' : 'no';
+  const question = String(randomNumber);
   return [question, answer];
 };
 
