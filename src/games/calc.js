@@ -3,7 +3,7 @@ import runGameEngine from '../index.js';
 
 const descriptionGame = 'What is the result of the expression?';
 
-const operators = ['/'];
+const operators = ['+', '-', '*'];
 
 const getAnswer = (num1, num2, operator) => {
   switch (operator) {
