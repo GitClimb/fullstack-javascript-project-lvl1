@@ -3,25 +3,18 @@ import runGameEngine from '../index.js';
 
 const descriptionGame = 'Find the greatest common divisor of given numbers.';
 
-const getAnswer = (coll) => {
-  coll.sort(((a, b) => a - b));
-  let result = 0;
-  let count = 1;
-
-  while (count < coll.at(1)) {
-    if (coll.at(0) % count === 0 && coll.at(1) % count === 0) {
-      result = count;
-    }
-    count += 1;
+const getGcd = (num1, num2) => {
+  if (num1 === 0) {
+    return num2;
   }
-  return String(result);
+  return String(getGcd(num2 % num1, num1));
 };
 
 const generateRound = () => {
   const number1 = _.random(1, 100);
   const number2 = _.random(1, 100);
   const question = `${number1} ${number2}`;
-  const answer = getAnswer([number1, number2]);
+  const answer = getGcd(number1, number2);
   return [question, answer];
 };
 
