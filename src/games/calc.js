@@ -3,7 +3,7 @@ import runGameEngine from '../index.js';
 
 const descriptionGame = 'What is the result of the expression?';
 
-const operators = ['+', '-', '*'];
+const operators = ['/'];
 
 const getAnswer = (num1, num2, operator) => {
   switch (operator) {
@@ -11,8 +11,10 @@ const getAnswer = (num1, num2, operator) => {
       return String(num1 + num2);
     case '-':
       return String(num1 - num2);
-    default:
+    case '*':
       return String(num1 * num2);
+    default:
+      throw new Error(`Operator ${operator} - doesn't supported`);
   }
 };
 
