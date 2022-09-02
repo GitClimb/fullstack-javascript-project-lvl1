@@ -3,18 +3,19 @@ import runGameEngine from '../index.js';
 
 export const descriptionGame = 'What number is missing in the progression?';
 
-const generateProgression = (length, start, steps) => {
-  const lengthProgression = length;
+const generateProgression = (lengthProgression, start, steps) => {
   const coll = [start];
 
-  for (let i = 0; i <= lengthProgression; i += 1) {
+  for (let i = 0; i < lengthProgression - 1; i += 1) {
+    console.log(lengthProgression);
     coll.push(coll[coll.length - 1] + steps);
   }
+  console.log(coll.length);
   return coll;
 };
 
 export const generateRound = () => {
-  const length = _.random(5, 9);
+  const length = _.random(5, 10);
   const start = _.random(1, 100);
   const steps = _.random(1, 100);
   const progression = generateProgression(length, start, steps);
