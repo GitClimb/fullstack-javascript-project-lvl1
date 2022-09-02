@@ -8,9 +8,8 @@ const generateProgression = (lengthProgression, start, steps) => {
 
   for (let i = 0; i < lengthProgression - 1; i += 1) {
     console.log(lengthProgression);
-    coll.push(coll[coll.length - 1] + steps);
+    coll.push(coll.at(-1) + steps);
   }
-  console.log(coll.length);
   return coll;
 };
 
