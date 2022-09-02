@@ -7,7 +7,6 @@ const generateProgression = (lengthProgression, start, steps) => {
   const coll = [start];
 
   for (let i = 0; i < lengthProgression - 1; i += 1) {
-    console.log(lengthProgression);
     coll.push(coll.at(-1) + steps);
   }
   return coll;
